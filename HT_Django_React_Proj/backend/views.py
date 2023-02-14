@@ -14,7 +14,7 @@ def create_user(request):
     if request.method == 'GET':
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return HttpResponse(serializer.data)
 
     elif request.method == 'POST':
         data = JSONParser().parse(request)
@@ -35,7 +35,7 @@ def user_detail(request, pk):
 
     if request.method == 'GET':
         serializer = UserSerializer(user)
-        return JsonResponse(serializer.data)
+        return HttpResponse(serializer.data)
 
     elif request.method == 'PUT':
         data = JSONParser().parse(request)
@@ -48,6 +48,23 @@ def user_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return HttpResponse(status=204)
+
+'''
+# api view for get & post (retrieve/create new X object)
+@api_view(['GET', 'POST'])
+def X_list(request):
+    if request.method == 'GET':
+        Xs = X.objects.all()
+        serializer = XSerializer(Xs, many=true)
+        return 
+    # if GET --> return JsonResponse of all Xs
+    # if POST --> create & return new JsonRsponse of new X
+    '''
+
+# api view for X detail, get, put, delete (retrieve/update/delete X object)
+# if GET --> return JsonResponse of object X
+# if PUT --> update JsonReponse of object X & return object
+# if DELETE --> delete object X, return HTTP response
 
 
 

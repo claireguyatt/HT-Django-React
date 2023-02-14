@@ -1,7 +1,5 @@
-# base imports
+# django imports
 from django.db import models
-
-# other django import
 from django.contrib.auth.models import User
 
 # project imports

@@ -1,0 +1,37 @@
+* {
+    margin: auto;
+    text-align: center;
+  }
+  input {
+    margin-top: 1%
+  }
+  form {
+    padding-bottom: 5%;
+  }
+  button {
+    margin-top: 3%;
+    font-size: 110%;
+  }
+  .error-message-container {
+    margin-top: 10%
+  }
+  * {
+    margin: auto;
+    text-align: center;
+  }
+  input {
+    margin-top: 1%
+  }
+  form {
+    padding-bottom: 5%;
+  }
+  button {
+    margin-top: 3%;
+    font-size: 110%;
+  }
+  .error-message-container {
+    margin-top: 10%
+  }
+  a {
+    padding: 5%;
+  }
